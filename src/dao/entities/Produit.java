@@ -9,15 +9,17 @@ public class Produit implements Serializable {
     private String description;
     private float prix;
     private int quantite;
+    private Categorie categorie;
 
     public Produit() {
     }
 
-    public Produit( String nom, String description, float prix, int quantite) {
+    public Produit( String nom, String description, float prix, int quantite, Categorie categorie) {
         this.nom = nom;
         this.description = description;
         this.prix = prix;
         this.quantite = quantite;
+        this.categorie=categorie;
     }
     public void setId(int id) {
         this.id = id;
@@ -56,6 +58,14 @@ public class Produit implements Serializable {
 
     public void setQuantite(int quantite) {
         this.quantite = quantite;
+    }
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
     }
 
     @Override

@@ -28,7 +28,6 @@ public class ProduitDaoImpl implements ProduitDao {
                 p.setQuantite(rs.getInt("QUANTITE"));
                 produits.add(p);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -56,8 +55,6 @@ public class ProduitDaoImpl implements ProduitDao {
         }catch (SQLException e){
             e.printStackTrace();
         }
-
-
         return p;
     }
 
